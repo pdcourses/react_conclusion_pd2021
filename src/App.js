@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component, Fragment } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+// class / fun
+
+class App extends Component {
+  render() {
+    return (
+      // '5'  => +'5'
+      <Fragment>
+        <h1>sdfsdfsdfsd</h1>
+        <p>10+2</p>
+        <p>{10 + 2}</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {10 + 2} and some {2 + 2}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <p id={2 + 2}>text1</p>
+        <p id={12 + 12}>text2</p>
+        <p>text3</p>
+      </Fragment>
+    );
+  }
 }
+/*
+function App() {
+  return null;
+}
+*/
 
 export default App;

@@ -1,31 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component, Fragment } from 'react';
+import UserList from './components/UserList';
 
-// class / fun
+const newUser = {
+  id: 100,
+  login: 'vasya100',
+  email: 'vasya@mail.com',
+};
+
+const newUser2 = {
+  id: 200,
+  name: 'vasya',
+};
+
+const data = [
+  {
+    id: 1,
+    login: 'vasya101',
+    email: 'vasya@mail.com',
+  },
+  {
+    id: 2,
+    login: 'vasya102',
+    email: 'vasya@mail.com',
+  },
+  {
+    id: 3,
+    login: 'vasya103',
+    email: 'vasya@mail.com',
+  },
+  {
+    id: 4,
+    login: 'vasya104',
+    email: 'vasya@mail.com',
+  },
+];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      // '5'  => +'5'
       <Fragment>
-        <h1>sdfsdfsdfsd</h1>
-        <p>10+2</p>
-        <p>{10 + 2}</p>
-        <p>
-          {10 + 2} and some {2 + 2}
-        </p>
-        <p id={2 + 2}>text1</p>
-        <p id={12 + 12}>text2</p>
-        <p>text3</p>
+        <UserList users={data} />
       </Fragment>
     );
   }
 }
-/*
-function App() {
-  return null;
-}
-*/
 
 export default App;
